@@ -1,7 +1,3 @@
-= ventouse
+= rc_actions
 
-Why vantouse? Why not?
-
-== to-do
-
-create fake mysqlplus-adapter using mysql_compat
+Better actions for http://github.com/ianwhite/resources_controller/ plugin
