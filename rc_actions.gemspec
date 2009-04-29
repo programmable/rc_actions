@@ -2,9 +2,9 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rc_actions}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
-  s.required_rubygems_version = Gem::Requirement.new(">= 1.3.2") if s.respond_to? :required_rubygems_version=
+  s.required_rubygems_version = Gem::Requirement.new(">= 1.3.1") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ilia Ablamonov", "Artem Orlov"]
   s.date = %q{2009-04-28}
   s.description = %q{Better actions for resources_controller plugin.}
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   ]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/programmable/rc_actions}
-  s.rdoc_options = ["--quiet", "--main", "README", "--inline-source", "--charset=UTF-8"]
+  s.rdoc_options = ["--quiet", "--main=README", "--inline-source", "--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.summary = %q{Better actions for resources_controller plugin.}
 
