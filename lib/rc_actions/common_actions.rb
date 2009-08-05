@@ -1,6 +1,6 @@
 module Programmable
   module ResourceController
-    module ServiceMethods
+    module AddCommonActions
       private
 
       def add_common_actions
@@ -27,6 +27,10 @@ module Programmable
           response_for_destroy resource.destroy
         end
       end
+    end
+
+    module ServiceMethods
+      private
 
       def response_for_create
         if @resource_saved
@@ -57,7 +61,7 @@ module Programmable
 
       def after_create_url
         resource_path
-      end                     
+      end
 
       def after_update_url
         resource_path
