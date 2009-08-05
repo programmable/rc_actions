@@ -1,30 +1,32 @@
 module Programmable
   module ResourceController
-    module CommonActions
-      def show
-      end
-
-      def new
-      end
-
-      def create
-        @resource_saved = resource.save
-        response_for_create
-      end
-
-      def edit
-      end
-
-      def update
-        @resource_saved = resource.update_attributes params[resource_name]
-        response_for_update
-      end
-
-      def destroy
-        response_for_destroy resource.destroy
-      end
-
+    module ServiceMethods
       private
+
+      def add_common_actions
+        define_method :show do
+        end
+
+        define_method :new do
+        end
+
+        define_method :create do
+          @resource_saved = resource.save
+          response_for_create
+        end
+
+        define_method :edit do
+        end
+
+        define_method :update do
+          @resource_saved = resource.update_attributes params[resource_name]
+          response_for_update
+        end
+
+        define_method :destroy do
+          response_for_destroy resource.destroy
+        end
+      end
 
       def response_for_create
         if @resource_saved

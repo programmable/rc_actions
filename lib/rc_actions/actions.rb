@@ -1,7 +1,9 @@
 module Programmable
   module ResourceController
     module Actions
-      include Programmable::ResourceController::CommonActions
+      include Programmable::ResourceController::ServiceMethods
+
+      add_common_actions
 
       declarations do
         before_filter :assign_new_resource, :only => [:new, :create]
@@ -14,7 +16,9 @@ module Programmable
     end
 
     module SingletonActions
-      include Programmable::ResourceController::CommonActions
+      include Programmable::ResourceController::ServiceMethods
+
+      add_common_actions
 
       declarations do
         before_filter :assign_new_resource, :only => [:new, :create]
